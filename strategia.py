@@ -3,9 +3,30 @@ from jednostki.lucznik import Lucznik
 
 rycerze = []
 for i in range(4):
-    rycerze.append("rycerz" + str(i))
+    rycerze.append(Rycerz())
 print(rycerze)
 
+for rycerz in rycerze:
+    rycerz.maszeruj(200)
+
+rycerze.append(Rycerz())
+
+for rycerz in rycerze:
+    rycerz.atakuj()
+
+print(rycerze)
+
+lucznicy = []
+for i in range(4):
+    lucznicy.append(Lucznik())
+print(lucznicy)
+
+armia = lucznicy + rycerze
+print(armia)
+
+for wojownik in armia:
+    wojownik.atakuj()
+print(armia)
 
 # def main():
 #     ry = Rycerz()
